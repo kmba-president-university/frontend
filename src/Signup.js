@@ -19,11 +19,12 @@ function Signup() {
         event.preventDefault();
         setErrors(Validation(values));
         if(errors.name === "" && errors.email === "" && errors.password === "") {
-            axios.post('http://localhost:8081/signup', values)
-            .then(res => {
-                navigate('/');
-            })
-            .catch(err => console.log(err));
+            axios
+              .post("http://156.67.216.151:6868/signup", values)
+              .then((res) => {
+                navigate("/");
+              })
+              .catch((err) => console.log(err));
         }
     }
     return (
