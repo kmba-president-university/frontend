@@ -86,8 +86,7 @@ const App = () => {
           >
             {event.title === "Lunar New Year" ? (
               <div className="relative overflow-hidden cursor-pointer mb-6">
-                <a
-                  href={event.src}
+                <div
                   data-gallery="gallery1"
                   data-glightbox={`title: ${event.title}; description: Celebrate the Lunar New Year with us! `}
                   className="glightbox3"
@@ -106,7 +105,7 @@ const App = () => {
                     </h3>
                     <small className="d-block">{event.month}</small>
                   </div>
-                </a>
+                </div>
               </div>
             ) : event.title === "Comstud" ? (
               <div className="relative overflow-hidden cursor-pointer mb-6">
