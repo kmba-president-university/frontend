@@ -17,6 +17,9 @@ RUN npm run build
 # Step 2: Serve the React application
 FROM nginx:alpine
 
+# Install nano
+RUN apk update && apk add nano
+
 # Copy the build output to the nginx html directory
 COPY --from=build /app/build /usr/share/nginx/html
 
